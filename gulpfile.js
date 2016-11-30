@@ -3,6 +3,8 @@ var compass = require('gulp-compass');
 var cssnano = require('gulp-cssnano');
 var autoprefixer = require('gulp-autoprefixer');
 var inject = require('gulp-inject');
+var browserify = require('browserify');
+var sources = require('vinyl-source-stream');
 
 var
     source = 'src/',
@@ -21,12 +23,20 @@ gulp.task('fonts', function () {
         .pipe(gulp.dest(fonts.out));
 });
 
+gulp.task('javascript', function () {
+
+    return browserify(source + 'js/app.js')
+        .bundle()
+        .pipe(sources('bundle.js'))
+        .pipe(gulp.dest(dest + 'js/'));
+});
+
 
 gulp.task('compass', ['fonts'], function () {
     return gulp.src([source + 'main.scss'])
         .pipe(compass({
             sass: source,
-            css:dest + 'styles',
+            css: dest + 'styles',
             import_path: bootstrapSass.in + 'assets/stylesheets'
         }))
         .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 7', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
@@ -45,4 +55,4 @@ gulp.task('traspaso-build', ['compass'], function () {
         .pipe(gulp.dest(dest));
 });
 
-gulp.task('default', ['traspaso-build'], function () {});
+gulp.task('default', ['traspaso-build', 'javascript'], function () {});
