@@ -12,7 +12,7 @@ var bootstrapSass = { in: './node_modules/bootstrap-sass/'
 };
 
 var fonts = { in: [source + 'fonts/*.*', bootstrapSass.in + 'assets/fonts/**/*'],
-    out: dest + 'fonts/'
+    out: dest + 'styles/fonts/'
 };
 
 gulp.task('fonts', function () {
@@ -26,7 +26,7 @@ gulp.task('compass', ['fonts'], function () {
     return gulp.src([source + 'main.scss'])
         .pipe(compass({
             sass: source,
-            import_path:bootstrapSass.in + 'assets/stylesheets'
+            import_path: bootstrapSass.in + 'assets/stylesheets'
         }))
         .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 7', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
         .pipe(cssnano())

@@ -1396,8 +1396,8 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857;
-  color: #333333;
-  background-color: #fff;
+  color: red;
+  background-color: black;
 }
 
 input,
@@ -2873,7 +2873,7 @@ th {
   border-top: 2px solid #ddd;
 }
 .table .table {
-  background-color: #fff;
+  background-color: black;
 }
 
 .table-condensed > thead > tr > th,
@@ -3549,7 +3549,7 @@ select[multiple].input-lg,
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #737373;
+  color: #ff8080;
 }
 
 @media (min-width: 768px) {
@@ -3674,7 +3674,7 @@ select[multiple].input-lg,
   outline-offset: -2px;
 }
 .btn:hover, .btn:focus, .btn.focus {
-  color: #333;
+  color: red;
   text-decoration: none;
 }
 .btn:active, .btn.active {
@@ -3696,40 +3696,40 @@ a.btn.disabled, fieldset[disabled] a.btn {
 }
 
 .btn-default {
-  color: #333;
-  background-color: #fff;
-  border-color: #ccc;
+  color: red;
+  background-color: black;
+  border-color: red;
 }
 .btn-default:focus, .btn-default.focus {
-  color: #333;
-  background-color: #e6e6e6;
-  border-color: #8c8c8c;
+  color: red;
+  background-color: black;
+  border-color: maroon;
 }
 .btn-default:hover {
-  color: #333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
+  color: red;
+  background-color: black;
+  border-color: #c20000;
 }
 .btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle {
-  color: #333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
+  color: red;
+  background-color: black;
+  border-color: #c20000;
 }
 .btn-default:active:hover, .btn-default:active:focus, .btn-default:active.focus, .btn-default.active:hover, .btn-default.active:focus, .btn-default.active.focus, .open > .btn-default.dropdown-toggle:hover, .open > .btn-default.dropdown-toggle:focus, .open > .btn-default.dropdown-toggle.focus {
-  color: #333;
-  background-color: #d4d4d4;
-  border-color: #8c8c8c;
+  color: red;
+  background-color: black;
+  border-color: maroon;
 }
 .btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle {
   background-image: none;
 }
 .btn-default.disabled:hover, .btn-default.disabled:focus, .btn-default.disabled.focus, .btn-default[disabled]:hover, .btn-default[disabled]:focus, .btn-default[disabled].focus, fieldset[disabled] .btn-default:hover, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default.focus {
-  background-color: #fff;
-  border-color: #ccc;
+  background-color: black;
+  border-color: red;
 }
 .btn-default .badge {
-  color: #fff;
-  background-color: #333;
+  color: black;
+  background-color: red;
 }
 
 .btn-primary {
@@ -7334,10 +7334,5 @@ button.close {
     display: none !important;
   }
 }
-body {
-  background-color: red;
-}
-
-.panel {
-  color: red;
-}
+/*@import 'styles/_main.scss';
+@import 'styles/_panel.scss';*/

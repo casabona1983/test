@@ -1,3 +1,12 @@
+@import "bootstrap/_variables.scss";
+//General
+$body-bg:black;
+$text-color: red;
+//Buttons
+$btn-default-color:red;
+$btn-default-bg:black;
+$btn-default-border:red;
 @import "_bootstrap.scss";
-@import 'styles/_main.scss';
-@import 'styles/_panel.scss';
+
+/*@import 'styles/_main.scss';
+@import 'styles/_panel.scss';*/
