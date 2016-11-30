@@ -26,6 +26,7 @@ gulp.task('compass', ['fonts'], function () {
     return gulp.src([source + 'main.scss'])
         .pipe(compass({
             sass: source,
+            css:dest + 'styles',
             import_path: bootstrapSass.in + 'assets/stylesheets'
         }))
         .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 7', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
